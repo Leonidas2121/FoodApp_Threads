@@ -1,0 +1,29 @@
+{
+  "StoreName": "Grill n' Chill",
+  "Latitude": 37.9815,
+  "Longitude": 23.7305,
+  "FoodCategory": "burger",
+  "Stars": 4,
+  "NoOfVotes": 150,
+  "StoreLogo": "grill1",
+  "Products": [
+    {
+      "ProductName": "BBQ Bacon Burger",
+      "ProductType": "burger",
+      "AvailableAmount": 30,
+      "Price": 8.0
+    },
+    {
+      "ProductName": "Veggie Burger",
+      "ProductType": "burger",
+      "AvailableAmount": 25,
+      "Price": 7.5
+    },
+    {
+      "ProductName": "Sweet Potato Fries",
+      "ProductType": "side",
+      "AvailableAmount": 40,
+      "Price": 3.5
+    }
+  ]
+}

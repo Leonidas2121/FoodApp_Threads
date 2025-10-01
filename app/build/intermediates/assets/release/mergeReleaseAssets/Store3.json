@@ -1,0 +1,29 @@
+{
+  "StoreName": "Taco Loco",
+  "Latitude": 37.990,
+  "Longitude": 23.728,
+  "FoodCategory": "mexican",
+  "Stars": 4,
+  "NoOfVotes": 125,
+  "StoreLogo": "taco3",
+  "Products": [
+    {
+      "ProductName": "Spicy Beef Taco",
+      "ProductType": "taco",
+      "AvailableAmount": 45,
+      "Price": 4.5
+    },
+    {
+      "ProductName": "Chicken Quesadilla",
+      "ProductType": "quesadilla",
+      "AvailableAmount": 30,
+      "Price": 6.5
+    },
+    {
+      "ProductName": "Guacamole Dip",
+      "ProductType": "side",
+      "AvailableAmount": 25,
+      "Price": 3.5
+    }
+  ]
+}

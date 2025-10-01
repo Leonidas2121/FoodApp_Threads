@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.9.2" type="conditional_incidents">
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_dollar_filled.xml"
+            line="13"
+            column="28"
+            startOffset="451"
+            endLine="13"
+            endColumn="48"
+            endOffset="471"/>
+        <map>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 31">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+                startOffset="715"
+                endOffset="735"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="17"
+            column="9"
+            startOffset="715"
+            endLine="17"
+            endColumn="29"
+            endOffset="735"/>
+        <map>
+            <condition minGE="31-∞"/>
+        </map>
+    </incident>
+
+</incidents>

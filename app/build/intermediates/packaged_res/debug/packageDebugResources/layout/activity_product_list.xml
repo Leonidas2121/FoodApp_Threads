@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/product_list_background">
+
+    <!-- AppBar με Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/cardBackground"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleTextColor="@color/black"
+            app:title="Προϊόντα" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Το κύριο μέρος της οθόνης: RecyclerView + Κουμπί -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp">
+
+        <!-- RecyclerView: καταλαμβάνει όλο το ύψος που απομένει (weight=1) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/product_list_desc"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:overScrollMode="ifContentScrolls"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <!-- Κουμπί Πίσω στο κάτω μέρος -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Πίσω"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

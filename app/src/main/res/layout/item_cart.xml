@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardBackground">
+
+    <TextView
+        android:id="@+id/tvCartName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Όνομα Προϊόντος"/>
+
+    <ImageButton
+        android:id="@+id/btnMinus"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="10dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_remove_24"
+
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvCartQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="1"/>
+
+    <ImageButton
+        android:id="@+id/btnPlus"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_24" />
+
+    <TextView
+        android:id="@+id/tvCartPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="0.00€"/>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.9.2" type="incidents">
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of com.android.application than 8.9.2 is available: 8.10.1. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.10.1 is difficult: 8.9.3)">
+        <fix-alternatives>
+            <fix-replace
+                description="Change to 8.10.1"
+                family="Update versions"
+                oldString="8.9.2"
+                replacement="8.10.1"
+                priority="0"/>
+            <fix-replace
+                description="Change to 8.9.3"
+                family="Update versions"
+                robot="true"
+                independent="true"
+                oldString="8.9.2"
+                replacement="8.9.3"
+                priority="0"/>
+        </fix-alternatives>
+        <location
+            file="$HOME/Desktop/p3220013_p3220142_p3220166/MyApplicationNetwork/gradle/libs.versions.toml"
+            line="2"
+            column="7"
+            startOffset="17"
+            endLine="2"
+            endColumn="14"
+            endOffset="24"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity than 1.8.0 is available: 1.10.1">
+        <fix-replace
+            description="Change to 1.10.1"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.10.1"
+            priority="0"/>
+        <location
+            file="$HOME/Desktop/p3220013_p3220142_p3220166/MyApplicationNetwork/gradle/libs.versions.toml"
+            line="8"
+            column="12"
+            startOffset="139"
+            endLine="8"
+            endColumn="19"
+            endOffset="146"/>
+    </incident>
+
+</incidents>

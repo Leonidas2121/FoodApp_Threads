@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.9.2" type="partial_results">
+    <map id="NotificationPermission">
+        <location id="class"
+            file="$GRADLE_USER_HOME/caches/8.11.1/transforms/f7747337d7367541fe6c472091a6ae3a/transformed/glide-4.14.2/jars/classes.jar"/>
+        <entry
+            name="className"
+            string="com/bumptech/glide/request/target/NotificationTarget"/>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.myapplicationnetwork.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.drawable.bg_main"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/bg_main.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="22"
+            endColumn="14"
+            endOffset="620"/>
+        <location id="R.drawable.burger2"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/burger2.jpg"/>
+        <location id="R.drawable.grill1"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/grill1.jpg"/>
+        <location id="R.drawable.ic_dollar_filled"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_dollar_filled.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="35"
+            endColumn="10"
+            endOffset="1062"/>
+        <location id="R.drawable.margherita"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/margherita.png"/>
+        <location id="R.drawable.mexican4"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/mexican4.jpg"/>
+        <location id="R.drawable.pasta5"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pasta5.jpg"/>
+        <location id="R.drawable.pepperoni"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pepperoni.png"/>
+        <location id="R.drawable.pizza6"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pizza6.jpg"/>
+        <location id="R.drawable.taco3"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/taco3.jpg"/>
+        <location id="R.layout.activity_store_manager"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_store_manager.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="35"
+            endColumn="16"
+            endOffset="1188"/>
+        <entry
+            name="model"
+            string="attr[actionBarSize(R),selectableItemBackgroundBorderless(R),borderlessButtonStyle(R),textAppearanceHeadline6(R),textAppearanceBody2(R)],color[black(U),white(U),starGrey(U),starGold(U),cardBackground(U),green(U)],drawable[bg_main(D),login_background(U),burger2(D),client_backgound(U),grill1(D),ic_add_24(U),ic_burger(U),ic_check_overlay(U),ic_dollar_filled(D),ic_euro(U),ic_launcher_background(U),ic_launcher_foreground(U),ic_launcher_foreground_1(R),ic_mexican(U),ic_pizzeria(U),ic_remove_24(U),ic_shopping_cart(U),ic_store(U),margherita(D),mexican4(D),pasta5(D),pepperoni(D),pizza6(D),product_list_background(U),taco3(D)],id[rvCart(U),tvTotal(U),btnCheckout(U),rootLayout(D),categoryLabel(D),categoryContainer(D),framePizzeria(U),imgPizzeria(U),checkPizzeria(U),frameMexican(U),imgMexican(U),checkMexican(U),frameBurger(U),imgBurger(U),checkBurger(U),minStarsLabel(D),minStarsRating(U),priceLabel(D),price_filter_container(D),group_price_1(U),price_1_1(U),group_price_2(U),price_2_1(U),price_2_2(U),group_price_3(U),price_3_1(U),price_3_2(U),price_3_3(U),editLatitude(U),editLongitude(U),searchButton(U),recyclerView(U),btnBack(U),etEmail(U),etPassword(U),btnLogin(U),imgBackground(D),tvWelcome(D),btnClient(U),toolbar(U),productRecycler(U),backButton(U),editFileName(D),btnLoadJson(D),textStoreManager(D),tvCartName(U),btnMinus(U),tvCartQty(U),btnPlus(U),tvCartPrice(U),storeLogo(U),storeName(U),storeCategory(U),storeRating(U),buyButton(U),imgProduct(U),tvName(U),quantityGroup(U),tvPrice(U),tvQuantity(U),btnAddToCart(U),ratingTitle(D),ratingMessage(D),ratingBar(U),action_cart(U)],layout[activity_cart(U),activity_client(U),activity_login(U),activity_main(U),activity_product_list(U),activity_store_manager(D),item_cart(U),list_item(U),product_item(U),rating_dialog(U)],menu[menu_products(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U),product_list_desc(U),appbar_scrolling_view_behavior(R)],style[Theme_MyApplicationNetwork(U),Widget_AppCompat_RatingBar_Small(R),ThemeOverlay_AppCompat_Dark_ActionBar(R),Base_Theme_MyApplicationNetwork(U),Theme_Material3_DayNight_NoActionBar(R)],xml[data_extraction_rules(U),backup_rules(U)];b^c,16^17,65^22^5^6,66^e^19^12^18^11^7^8^76^14^5^6,67^c^5^6,68^c^5^6,69^22^9^0^77^5^73^74^6,6b^9^1^1a^5^10,6c^1c^7^8^5^6,6d^9^5d^5b^5c^1a^2^10^5^6^5e,6e^3^4^8,6f^1b,70^15^16,71^15^16,75^78,78^79;;;"/>
+    </map>
+
+</incidents>

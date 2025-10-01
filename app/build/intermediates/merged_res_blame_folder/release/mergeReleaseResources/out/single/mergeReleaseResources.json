@@ -1,0 +1,198 @@
+[
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_activity_login.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/menu_menu_products.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/menu/menu_products.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_dollar_filled.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_dollar_filled.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_activity_client.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/activity_client.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_add_24.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_add_24.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_check_overlay.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_check_overlay.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_remove_24.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_remove_24.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_shopping_cart.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_shopping_cart.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_pepperoni.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/pepperoni.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_burger2.jpg.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/burger2.jpg"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/xml_backup_rules.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_margherita.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/margherita.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_activity_cart.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/activity_cart.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_list_item.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/list_item.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_bg_main.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/bg_main.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_rating_dialog.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/rating_dialog.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_taco3.jpg.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/taco3.jpg"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_pizzeria.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_pizzeria.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_activity_main.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_mexican.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_mexican.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_item_cart.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/item_cart.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_euro.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_euro.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_burger.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_burger.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_activity_store_manager.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/activity_store_manager.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_pasta5.jpg.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/pasta5.jpg"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_product_item.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/product_item.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_pizza6.jpg.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/pizza6.jpg"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_mexican4.jpg.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/mexican4.jpg"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_login_background.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/login_background.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_grill1.jpg.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/grill1.jpg"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_client_backgound.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/client_backgound.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_store.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_store.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_product_list_background.png.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/product_list_background.png"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/layout_activity_product_list.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/layout/activity_product_list.xml"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.myapplicationnetwork.app-release-32:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.myapplicationnetwork.app-main-33:/drawable/ic_launcher_foreground.xml"
+    }
+]

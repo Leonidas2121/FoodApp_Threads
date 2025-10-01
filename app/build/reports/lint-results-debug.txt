@@ -1,0 +1,485 @@
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\CartActivity.java:59: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        tvTotal.setText(String.format("Σύνολο: %.2f€", total));
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\CartAdapter.java:37: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        holder.tvPrice.setText(String.format("%.2f€", ci.getProduct().getPrice() * ci.getQuantity()));
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\ProductAdapter.java:45: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        holder.tvPrice.setText(String.format("%.2f€", product.getPrice()));
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\build.gradle:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 34
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdkVersion specifies that it has been tested with,
+   various compatibility modes kick in. This ensures that your application
+   continues to work, but it may look out of place. For example, if the
+   targetSdkVersion is less than 14, your app may get an option button in the
+   UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\gradle\libs.versions.toml:2: Warning: A newer version of com.android.application than 8.9.2 is available: 8.10.1. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.10.1 is difficult: 8.9.3) [AndroidGradlePluginVersion]
+agp = "8.9.2"
+      ~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\gradle\libs.versions.toml:2: Warning: A newer version of com.android.application than 8.9.2 is available: 8.10.1. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.10.1 is difficult: 8.9.3) [AndroidGradlePluginVersion]
+agp = "8.9.2"
+      ~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\gradle\libs.versions.toml:2: Warning: A newer version of com.android.application than 8.9.2 is available: 8.10.1. (There is also a newer version of 8.9.𝑥 available, if upgrading to 8.10.1 is difficult: 8.9.3) [AndroidGradlePluginVersion]
+agp = "8.9.2"
+      ~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\build.gradle:7: Warning: A newer version of compileSdkVersion than 34 is available: 35 [GradleDependency]
+    compileSdk 34
+    ~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\gradle\libs.versions.toml:8: Warning: A newer version of androidx.activity:activity than 1.8.0 is available: 1.10.1 [GradleDependency]
+activity = "1.8.0"
+           ~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\gradle\libs.versions.toml:8: Warning: A newer version of androidx.activity:activity than 1.8.0 is available: 1.10.1 [GradleDependency]
+activity = "1.8.0"
+           ~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\gradle\libs.versions.toml:8: Warning: A newer version of androidx.activity:activity than 1.8.0 is available: 1.10.1 [GradleDependency]
+activity = "1.8.0"
+           ~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\StoreAdapter.java:78: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+                int resId = context.getResources().getIdentifier(
+                                                   ~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\CartActivity.java:143: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                adapter.notifyDataSetChanged();
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\CartAdapter.java:46: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+            notifyDataSetChanged();
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\CartAdapter.java:52: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+            notifyDataSetChanged();
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\java\com\example\myapplicationnetwork\StoreAdapter.java:40: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_main.xml:3: Warning: This <FrameLayout> can be replaced with a <merge> tag [MergeRootFrame]
+<FrameLayout
+^
+
+   Explanation for issues of type "MergeRootFrame":
+   If a <FrameLayout> is the root of a layout and does not provide background
+   or padding etc, it can often be replaced with a <merge> tag which is
+   slightly more efficient. Note that this depends on context, so make sure
+   you understand how the <merge> tag works before proceeding.
+
+   https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_cart.xml:9: Warning: Possible overdraw: Root element paints background @drawable/product_list_background with a theme that also paints a background (inferred theme is @style/Theme.MyApplicationNetwork) [Overdraw]
+    android:background="@drawable/product_list_background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:11: Warning: Possible overdraw: Root element paints background @drawable/client_backgound with a theme that also paints a background (inferred theme is @style/Theme.MyApplicationNetwork) [Overdraw]
+    android:background="@drawable/client_backgound">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_login.xml:9: Warning: Possible overdraw: Root element paints background @drawable/login_background with a theme that also paints a background (inferred theme is @style/Theme.MyApplicationNetwork) [Overdraw]
+    android:background="@drawable/login_background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_product_list.xml:7: Warning: Possible overdraw: Root element paints background @drawable/product_list_background with a theme that also paints a background (inferred theme is @style/Theme.MyApplicationNetwork) [Overdraw]
+    android:background="@drawable/product_list_background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\item_cart.xml:9: Warning: Possible overdraw: Root element paints background @color/cardBackground with a theme that also paints a background (inferred theme is @style/Theme.MyApplicationNetwork) [Overdraw]
+    android:background="@color/cardBackground">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_store_manager.xml:2: Warning: The resource R.layout.activity_store_manager appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\bg_main.xml:2: Warning: The resource R.drawable.bg_main appears to be unused [UnusedResources]
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+^
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\burger2.jpg: Warning: The resource R.drawable.burger2 appears to be unused [UnusedResources]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\grill1.jpg: Warning: The resource R.drawable.grill1 appears to be unused [UnusedResources]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_dollar_filled.xml:2: Warning: The resource R.drawable.ic_dollar_filled appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\margherita.png: Warning: The resource R.drawable.margherita appears to be unused [UnusedResources]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\mexican4.jpg: Warning: The resource R.drawable.mexican4 appears to be unused [UnusedResources]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\pasta5.jpg: Warning: The resource R.drawable.pasta5 appears to be unused [UnusedResources]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\pepperoni.png: Warning: The resource R.drawable.pepperoni appears to be unused [UnusedResources]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\pizza6.jpg: Warning: The resource R.drawable.pizza6 appears to be unused [UnusedResources]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\taco3.jpg: Warning: The resource R.drawable.taco3 appears to be unused [UnusedResources]
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\burger2.jpg: Warning: Found bitmap drawable res/drawable/burger2.jpg in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\client_backgound.png: Warning: Found bitmap drawable res/drawable/client_backgound.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\grill1.jpg: Warning: Found bitmap drawable res/drawable/grill1.jpg in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_burger.png: Warning: Found bitmap drawable res/drawable/ic_burger.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_check_overlay.png: Warning: Found bitmap drawable res/drawable/ic_check_overlay.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_euro.png: Warning: Found bitmap drawable res/drawable/ic_euro.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_mexican.png: Warning: Found bitmap drawable res/drawable/ic_mexican.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_pizzeria.png: Warning: Found bitmap drawable res/drawable/ic_pizzeria.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_shopping_cart.png: Warning: Found bitmap drawable res/drawable/ic_shopping_cart.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\ic_store.png: Warning: Found bitmap drawable res/drawable/ic_store.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\login_background.png: Warning: Found bitmap drawable res/drawable/login_background.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\margherita.png: Warning: Found bitmap drawable res/drawable/margherita.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\mexican4.jpg: Warning: Found bitmap drawable res/drawable/mexican4.jpg in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\pasta5.jpg: Warning: Found bitmap drawable res/drawable/pasta5.jpg in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\pepperoni.png: Warning: Found bitmap drawable res/drawable/pepperoni.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\pizza6.jpg: Warning: Found bitmap drawable res/drawable/pizza6.jpg in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\product_list_background.png: Warning: Found bitmap drawable res/drawable/product_list_background.png in densityless folder [IconLocation]
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\drawable\taco3.jpg: Warning: Found bitmap drawable res/drawable/taco3.jpg in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.webp: Warning: The following unrelated icon files have identical contents: ic_launcher.webp, ic_launcher_round.webp, ic_launcher.webp, ic_launcher_round.webp, ic_launcher.webp, ic_launcher_round.webp, ic_launcher.webp, ic_launcher_round.webp, ic_launcher.webp, ic_launcher_round.webp [IconDuplicates]
+
+   Explanation for issues of type "IconDuplicates":
+   If an icon is repeated under different names, you can consolidate and just
+   use one of the icons and delete the others to make your application
+   smaller. However, duplicated icons usually are not intentional and can
+   sometimes point to icons that were accidentally overwritten or accidentally
+   not updated.
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_store_manager.xml:8: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:245: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:262: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_store_manager.xml:8: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\build.gradle:33: Warning: Use version catalog instead [UseTomlInstead]
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.0") // Or the latest version
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\build.gradle:35: Warning: Use version catalog instead [UseTomlInstead]
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\build.gradle:36: Warning: Use version catalog instead [UseTomlInstead]
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseTomlInstead":
+   If your project is using a libs.versions.toml file, you should place all
+   Gradle dependencies in the TOML file. This lint check looks for version
+   declarations outside of the TOML file and suggests moving them (and in the
+   IDE, provides a quickfix to performing the operation automatically).
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:46: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:68: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:90: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\item_cart.xml:18: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageButton
+     ~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\item_cart.xml:36: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageButton
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_cart.xml:23: Warning: Hardcoded string "Σύνολο: 0.00€", should use @string resource [HardcodedText]
+        android:text="Σύνολο: 0.00€"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_cart.xml:33: Warning: Hardcoded string "Ολοκλήρωση Αγοράς", should use @string resource [HardcodedText]
+        android:text="Ολοκλήρωση Αγοράς"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:18: Warning: Hardcoded string "Επιλέξτε Κατηγορία", should use @string resource [HardcodedText]
+        android:text="Επιλέξτε Κατηγορία"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:45: Warning: Hardcoded string "Pizzeria", should use @string resource [HardcodedText]
+                android:contentDescription="Pizzeria" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:67: Warning: Hardcoded string "Mexican", should use @string resource [HardcodedText]
+                android:contentDescription="Mexican" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:89: Warning: Hardcoded string "Burger", should use @string resource [HardcodedText]
+                android:contentDescription="Burger" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:105: Warning: Hardcoded string "Ελάχιστα αστέρια", should use @string resource [HardcodedText]
+        android:text="Ελάχιστα αστέρια"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:132: Warning: Hardcoded string "Επιλέξτε Τιμή", should use @string resource [HardcodedText]
+        android:text="Επιλέξτε Τιμή"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:162: Warning: Hardcoded string "price_single_euro", should use @string resource [HardcodedText]
+            android:contentDescription="price_single_euro" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:184: Warning: Hardcoded string "price_double_euro_part1", should use @string resource [HardcodedText]
+            android:contentDescription="price_double_euro_part1" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:191: Warning: Hardcoded string "price_double_euro_part2", should use @string resource [HardcodedText]
+            android:contentDescription="price_double_euro_part2" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:213: Warning: Hardcoded string "price_triple_euro_part1", should use @string resource [HardcodedText]
+            android:contentDescription="price_triple_euro_part1" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:220: Warning: Hardcoded string "price_triple_euro_part2", should use @string resource [HardcodedText]
+            android:contentDescription="price_triple_euro_part2" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:227: Warning: Hardcoded string "price_triple_euro_part3", should use @string resource [HardcodedText]
+            android:contentDescription="price_triple_euro_part3" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:242: Warning: Hardcoded string "Lat", should use @string resource [HardcodedText]
+            android:text="Lat"
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:250: Warning: Hardcoded string "π.χ. 37.98", should use @string resource [HardcodedText]
+            android:hint="π.χ. 37.98"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:258: Warning: Hardcoded string "Lon", should use @string resource [HardcodedText]
+            android:text="Lon"
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:267: Warning: Hardcoded string "π.χ. 23.72", should use @string resource [HardcodedText]
+            android:hint="π.χ. 23.72"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:280: Warning: Hardcoded string "Αναζήτηση", should use @string resource [HardcodedText]
+        android:text="Αναζήτηση"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_client.xml:299: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
+        android:text="Back"
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_login.xml:16: Warning: Hardcoded string "Σύνδεση", should use @string resource [HardcodedText]
+        android:text="Σύνδεση"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_login.xml:26: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+        android:hint="Email"
+        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_login.xml:34: Warning: Hardcoded string "Κωδικός", should use @string resource [HardcodedText]
+        android:hint="Κωδικός"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_login.xml:43: Warning: Hardcoded string "Επιβεβαίωση", should use @string resource [HardcodedText]
+        android:text="Επιβεβαίωση"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_main.xml:23: Warning: Hardcoded string "Welcome to NomNomNow", should use @string resource [HardcodedText]
+        android:text="Welcome to NomNomNow"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_main.xml:39: Warning: Hardcoded string "Sign In", should use @string resource [HardcodedText]
+        android:text="Sign In"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_product_list.xml:49: Warning: Hardcoded string "Πίσω", should use @string resource [HardcodedText]
+            android:text="Πίσω"
+            ~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_store_manager.xml:12: Warning: Hardcoded string "Όνομα αρχείου JSON (π.χ. Store1.json)", should use @string resource [HardcodedText]
+        android:hint="Όνομα αρχείου JSON (π.χ. Store1.json)" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_store_manager.xml:18: Warning: Hardcoded string "Φόρτωσε κατάστημα", should use @string resource [HardcodedText]
+        android:text="Φόρτωσε κατάστημα"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\activity_store_manager.xml:31: Warning: Hardcoded string "Αποτελέσματα θα εμφανιστούν εδώ", should use @string resource [HardcodedText]
+            android:text="Αποτελέσματα θα εμφανιστούν εδώ"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\item_cart.xml:16: Warning: Hardcoded string "Όνομα Προϊόντος", should use @string resource [HardcodedText]
+        android:text="Όνομα Προϊόντος"/>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\item_cart.xml:34: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+        android:text="1"/>
+        ~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\item_cart.xml:49: Warning: Hardcoded string "0.00€", should use @string resource [HardcodedText]
+        android:text="0.00€"/>
+        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\list_item.xml:17: Warning: Hardcoded string "Store logo", should use @string resource [HardcodedText]
+        android:contentDescription="Store logo" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\list_item.xml:29: Warning: Hardcoded string "Όνομα καταστήματος", should use @string resource [HardcodedText]
+            android:text="Όνομα καταστήματος"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\list_item.xml:37: Warning: Hardcoded string "Κατηγορία", should use @string resource [HardcodedText]
+            android:text="Κατηγορία" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\list_item.xml:60: Warning: Hardcoded string "Αγόρασε", should use @string resource [HardcodedText]
+        android:text="Αγόρασε" />
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\menu\menu_products.xml:7: Warning: Hardcoded string "Καλάθι", should use @string resource [HardcodedText]
+        android:title="Καλάθι"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\product_item.xml:22: Warning: Hardcoded string "Εικόνα προϊόντος", should use @string resource [HardcodedText]
+            android:contentDescription="Εικόνα προϊόντος"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\product_item.xml:34: Warning: Hardcoded string "Margherita", should use @string resource [HardcodedText]
+            android:text="Margherita"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\product_item.xml:48: Warning: Hardcoded string "7.50€", should use @string resource [HardcodedText]
+            android:text="7.50€"
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\product_item.xml:73: Warning: Hardcoded string "Μείωση", should use @string resource [HardcodedText]
+                android:contentDescription="Μείωση" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\product_item.xml:80: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:text="0"
+                ~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\product_item.xml:90: Warning: Hardcoded string "Αύξηση", should use @string resource [HardcodedText]
+                android:contentDescription="Αύξηση" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\product_item.xml:100: Warning: Hardcoded string "Προσθήκη", should use @string resource [HardcodedText]
+            android:text="Προσθήκη"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\rating_dialog.xml:12: Warning: Hardcoded string "Βαθμολογήστε την παραγγελία σας", should use @string resource [HardcodedText]
+        android:text="Βαθμολογήστε την παραγγελία σας"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\user\Desktop\p3220013_p3220142_p3220166\MyApplicationNetwork\app\src\main\res\layout\rating_dialog.xml:20: Warning: Hardcoded string "Πόσα αστέρια θα δίνατε στην εμπειρία σας;", should use @string resource [HardcodedText]
+        android:text="Πόσα αστέρια θα δίνατε στην εμπειρία σας;"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 111 warnings

@@ -1,0 +1,29 @@
+{
+  "StoreName": "Burger House",
+  "Latitude": 37.9800,
+  "Longitude": 23.7290,
+  "FoodCategory": "burger",
+  "Stars": 5,
+  "NoOfVotes": 200,
+  "StoreLogo": "burger2",
+  "Products": [
+    {
+      "ProductName": "Classic Burger",
+      "ProductType": "burger",
+      "AvailableAmount": 40,
+      "Price": 6.5
+    },
+    {
+      "ProductName": "Cheeseburger",
+      "ProductType": "burger",
+      "AvailableAmount": 35,
+      "Price": 7.0
+    },
+    {
+      "ProductName": "Fries",
+      "ProductType": "side",
+      "AvailableAmount": 50,
+      "Price": 3.0
+    }
+  ]
+}

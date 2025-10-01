@@ -1,0 +1,29 @@
+{
+    "StoreName": "Pizza Paradise",
+    "Latitude": 37.9838,
+    "Longitude": 23.7275,
+    "FoodCategory": "pizzeria",
+    "Stars": 4,
+    "NoOfVotes": 1,
+    "StoreLogo": "pizza6",
+    "Products": [
+        {
+            "ProductName": "Margherita",
+            "ProductType": "pizza",
+            "AvailableAmount": 50,
+            "Price": 7.5
+        },
+        {
+            "ProductName": "Pepperoni",
+            "ProductType": "pizza",
+            "AvailableAmount": 30,
+            "Price": 9.0
+        },
+        {
+            "ProductName": "Caesar Salad",
+            "ProductType": "salad",
+            "AvailableAmount": 20,
+            "Price": 5.0
+        }
+    ]
+}

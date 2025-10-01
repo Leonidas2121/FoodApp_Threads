@@ -1,0 +1,29 @@
+{
+  "StoreName": "Pasta Corner",
+  "Latitude": 37.9825,
+  "Longitude": 23.7285,
+  "FoodCategory": "pizzeria",
+  "Stars": 4,
+  "NoOfVotes": 110,
+  "StoreLogo": "pasta5",
+  "Products": [
+    {
+      "ProductName": "Spaghetti Bolognese",
+      "ProductType": "pasta",
+      "AvailableAmount": 30,
+      "Price": 9.5
+    },
+    {
+      "ProductName": "Penne Alfredo",
+      "ProductType": "pasta",
+      "AvailableAmount": 25,
+      "Price": 10.0
+    },
+    {
+      "ProductName": "Garlic Bread",
+      "ProductType": "side",
+      "AvailableAmount": 40,
+      "Price": 3.5
+    }
+  ]
+}

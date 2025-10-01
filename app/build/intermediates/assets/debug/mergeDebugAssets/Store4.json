@@ -1,0 +1,29 @@
+{
+  "StoreName": "Mexican Fiesta",
+  "Latitude": 37.9870,
+  "Longitude": 23.7260,
+  "FoodCategory": "mexican",
+  "Stars": 3,
+  "NoOfVotes": 90,
+  "StoreLogo": "mexican4",
+  "Products": [
+    {
+      "ProductName": "Beef Burrito",
+      "ProductType": "burrito",
+      "AvailableAmount": 30,
+      "Price": 8.0
+    },
+    {
+      "ProductName": "Chicken Taco",
+      "ProductType": "taco",
+      "AvailableAmount": 40,
+      "Price": 4.0
+    },
+    {
+      "ProductName": "Nachos",
+      "ProductType": "side",
+      "AvailableAmount": 35,
+      "Price": 5.5
+    }
+  ]
+}

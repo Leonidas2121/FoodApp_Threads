@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/product_list_background">
+
+    <!-- RecyclerView με τα αντικείμενα του καλαθιού -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Σύνολο -->
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Σύνολο: 0.00€"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:gravity="end"/>
+
+    <!-- Κουμπί ολοκλήρωσης αγοράς -->
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ολοκλήρωση Αγοράς"
+        android:layout_marginTop="12dp"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
+</LinearLayout>

@@ -1,0 +1,45 @@
+ plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.example'
+version '1.0'
+
+application {
+    mainClass = 'com.example.myapplicationnetwork.Master'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+}
+compileJava {
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+}
+jar {
+    manifest {
+        attributes 'Main-Class': application.mainClass
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+task printClasspath {
+    doLast {
+        configurations.runtimeClasspath.each { File file ->
+            println file.absolutePath
+        }
+        println "${sourceSets.main.output.classesDirs.asPath}"
+    }
+}
+
+
+
+
+

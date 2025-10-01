@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/ratingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Βαθμολογήστε την παραγγελία σας"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/ratingMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Πόσα αστέρια θα δίνατε στην εμπειρία σας;"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:paddingBottom="16dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:isIndicator="false"
+        style="?android:attr/ratingBarStyle"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:progressTint="@color/starGold"
+        android:progressTintMode="src_atop"/>
+
+</LinearLayout>
